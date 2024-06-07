@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   env_helpers.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgori <fgori@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rileone <rileone@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 16:23:54 by fgori             #+#    #+#             */
-/*   Updated: 2024/06/07 14:14:29 by fgori            ###   ########.fr       */
+/*   Updated: 2024/06/07 16:29:23 by rileone          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ t_env	**get_env_info(char *envp_mtx[])
 		if (node == NULL)
 		{
 			clean_env_lst(env_struct);
-			exit (-1);
+			exit (EXIT_FAILURE);
 		}
 		add_node_to_env_struct(env_struct, node);
 		counter++;

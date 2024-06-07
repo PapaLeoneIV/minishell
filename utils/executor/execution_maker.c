@@ -140,16 +140,14 @@ void	child_process(t_shell *shell, t_command *cmd, int tm_i, int tm_ou)
 			dup2(1, 1);
 		}
 	}
-	exit(0);
+	exit(EXIT_SUCCESS);
 }
 
 void	fork_and_ecseve(t_shell *shell, t_command *cmd, int tm_i, int tm_ou)
 {
 	cmd->fork_id = fork();
 	if (cmd->fork_id == 0)
-	{
 		child_process(shell, cmd, tm_i, tm_ou);
-	}
 	else
 	{
 		if (cmd->here)
